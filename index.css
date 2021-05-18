@@ -1,0 +1,24 @@
+/*pega o irmão próximo ,serve também para classes*/
+.pai h1 + p {
+  color: rgb(214, 213, 213);
+}
+
+/* pego todos as tag <p> após h1,serve também para as classes  */
+.pai h1 ~ p {
+  color: blue;
+}
+
+/*dessa maneira consigo acessar  apenas um elemento(p,h1,span)  */
+[primary] {
+  color: aqua;
+}
+
+/* dessa maneira é bastante especifico  ou seja. Secondary não for
+igual "ABC" , a cor selecionada não e atribuída  */
+[secondary="ABC"] {
+  color: chartreuse;
+}
+
+/* meu seletor^="A" { tudo que começa com A sofre alteração}  */
+/* meu seletor$="A" { tudo que termina com A sofre alteração}  */
+/* meu seletor*="A" { tudo que termina contem "A"  sofre alteração} */
