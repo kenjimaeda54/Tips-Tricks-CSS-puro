@@ -3,7 +3,7 @@
   color: rgb(214, 213, 213);
 }
 
-/* pego todos as tag <p> após h1,serve também para as classes  */
+/*pego todos as tag <p> após h1,serve também para as classes  */
 .pai h1 ~ p {
   color: blue;
 }
@@ -13,12 +13,54 @@
   color: aqua;
 }
 
-/* dessa maneira é bastante especifico  ou seja. Secondary não for
+/*dessa maneira é bastante especifico  ou seja. Secondary não for
 igual "ABC" , a cor selecionada não e atribuída  */
 [secondary="ABC"] {
   color: chartreuse;
 }
 
-/* meu seletor^="A" { tudo que começa com A sofre alteração}  */
-/* meu seletor$="A" { tudo que termina com A sofre alteração}  */
-/* meu seletor*="A" { tudo que termina contem "A"  sofre alteração} */
+/*meu seletor^="A" { tudo que começa com A sofre alteração}  */
+/*meu seletor$="A" { tudo que termina com A sofre alteração}  */
+/*meu seletor*="A" { tudo que termina contem "A"  sofre alteração} */
+
+/* links que foram  visitados será atribuído a esta cor    */
+a:visited {
+  color: bisque;
+}
+
+/* assim que usuário clicar  no link a cor e atribuída */
+a:active {
+  color: blueviolet;
+}
+
+/*  link  que não foi visitado será atribuído a esta cor    */
+a:link {
+  color: blueviolet;
+}
+
+/* Se o botão input tipo checked for  acionado, tag <p> recebe a cor   */
+.check:checked + p {
+  color: chartreuse;
+}
+
+/* so ultimo li seara atribuído */
+.pai2 li:last-child {
+  color: blueviolet;
+}
+
+/* so o primeiro <li> vai ser atribuído a cor */
+.pai2 li:first-child {
+  color: yellowgreen;
+}
+
+/* inputs com a propriedade required serão atribuídos   essa cor */
+.required:required {
+  background-color: aqua;
+}
+
+/* focus e  a propriedade quando o cursor do mouse esta no elemento  */
+/* serve para inputs,botões entre outros elementos que tem propriedades   */
+/* focus */
+.required + input:focus {
+  background-color: brown;
+}
